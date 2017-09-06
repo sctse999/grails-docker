@@ -39,7 +39,6 @@ versions.each() { version->
     execute("git add .")
     execute("git commit -m '${version}'")
     execute("git tag -f ${version}");
-    // cmd.execute();
 }
 
 def execute(String cmd) {
@@ -47,10 +46,6 @@ def execute(String cmd) {
     proc.waitFor();
     println "$cmd: " + proc.text
 }
-
-// cmd = " git push --tags"
-// cmd.execute();
-
 
 def generateDockerfile(String version) {
 
