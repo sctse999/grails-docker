@@ -40,7 +40,7 @@ versions.each() { version->
     execute("git add .")
     execute("git commit -m '${version}'")
     execute("git tag -f ${version}");
-    execute("git push origin");
+    // execute("git push origin");
     execute("git push origin ${version}");
 }
 
