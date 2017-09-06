@@ -20,7 +20,6 @@ process.text.eachLine() {
 
 }
 versions = versions.unique()
-// versions = ['5.1']
 
 versions.each() { version->
     cmd = "mkdir ${version}";
@@ -36,12 +35,14 @@ versions.each() { version->
     "cp $filePath ./Dockerfile".execute().waitFor();
     // execute("cat ./Dockerfile");
 
-    'git status'.execute().text
+
     execute("git add .")
     execute("git commit -m '${version}'")
     execute("git tag -f ${version}");
     // execute("git push origin");
-    execute("git push origin -f ${version}");
+
+
+    // execute("git push origin -f ${version}");
 }
 
 def execute(String cmd) {
@@ -51,8 +52,16 @@ def execute(String cmd) {
 }
 
 def generateDockerfile(String version) {
+    String templateFile;
+    def majorVersion = version.take(1);
 
-    String dockerfile = new File('./Dockerfile.tmpl').text
+    if (majorVersion == "2") {
+        templateFile = './Dockerfile.v2.tmpl'
+    } else if (majorVersion == "3") {
+        templateFile = './Dockerfile.v3.tmpl'
+    }
+
+    String dockerfile = new File(templateFile).text
     dockerfile = dockerfile.replace('%%version%%', version)
     return dockerfile
 }
