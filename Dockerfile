@@ -4,7 +4,7 @@ FROM openjdk:7
 
 # Set customizable env vars defaults.
 # Set Grails version
-ENV GRAILS_VERSION 2.1.3
+ENV GRAILS_VERSION 2.1.4
 
 # Install Grails
 WORKDIR /opt
