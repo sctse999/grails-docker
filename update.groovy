@@ -34,7 +34,7 @@ versions.each() { version->
 
     println "cp $filePath ./Dockerfile"
     "cp $filePath ./Dockerfile".execute().waitFor();
-    execute("cat ./Dockerfile");
+    // execute("cat ./Dockerfile");
 
     'git status'.execute().text
     execute("git add .")
