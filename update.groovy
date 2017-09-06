@@ -20,7 +20,7 @@ process.text.eachLine() {
 
 }
 versions = versions.unique()
-versions = ['2.1.1','2.1.2','2.1.3']
+versions = ['2.1.1']
 
 versions.each() { version->
     cmd = "mkdir ${version}";
