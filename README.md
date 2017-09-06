@@ -13,7 +13,9 @@ However, there is one case that you may want to use a dockerized grails image: W
 
 ## How to use this image
 
-`# docker run -it -v my-grails-app:/app proactivehk/grails:2.3.7 `
+`# docker run -it -v my-grails-app:/app proactivehk/grails:2.3.11 `
+
+`# docker run -it -v my-grails-app:/app proactivehk/grails:3.2.7`
 
 `# grails run-app`
 
