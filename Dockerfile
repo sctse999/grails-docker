@@ -4,7 +4,7 @@ FROM openjdk:8
 
 # Set customizable env vars defaults.
 # Set Grails version
-ENV GRAILS_VERSION 3.0.1
+ENV GRAILS_VERSION 3.0.10
 
 # Install Grails
 WORKDIR /opt
