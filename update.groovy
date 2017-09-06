@@ -21,7 +21,7 @@ process.text.eachLine() {
 }
 versions = versions.unique()
 
-versions= ['3.0.2','3.0.5','3.0.8']
+// versions= ['3.0.2','3.0.5','3.0.8']
 versions.each() { version->
     cmd = "mkdir ${version}";
     String dockerfile = generateDockerfile(version);
