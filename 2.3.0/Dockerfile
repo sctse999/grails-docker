@@ -1,6 +1,6 @@
 # Credits:
 # https://github.com/mozart-analytics/grails-docker
-FROM openjdk:8
+FROM openjdk:7
 
 # Set customizable env vars defaults.
 # Set Grails version
