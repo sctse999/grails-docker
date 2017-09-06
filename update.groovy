@@ -20,7 +20,7 @@ process.text.eachLine() {
 
 }
 versions = versions.unique()
-versions = ['2.1.1']
+// versions = ['5.1']
 
 versions.each() { version->
     cmd = "mkdir ${version}";
@@ -41,7 +41,7 @@ versions.each() { version->
     execute("git commit -m '${version}'")
     execute("git tag -f ${version}");
     // execute("git push origin");
-    execute("git push origin ${version}");
+    execute("git push origin -f ${version}");
 }
 
 def execute(String cmd) {
