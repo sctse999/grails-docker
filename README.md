@@ -1,4 +1,4 @@
-# grails-docker
+# Grails-docker - Dockerized grails image
 
 ## What is Grails?
 Grails is a powerful Groovy-based web application framework for the JVM built on top of Spring Boot. 
@@ -13,7 +13,8 @@ However, there is one case that you may want to use a dockerized grails image: W
 
 ## How to use this image
 
-$ docker run -it proactivehk/grails:2.3.7 
+`# docker run -it -v my-grails-app:/app proactivehk/grails:2.3.7 `
+`# grails run-app`
 
 ## Advance usage
 
