@@ -33,16 +33,11 @@ versions.each() { version->
 
     println "cp $filePath ./Dockerfile"
     "cp $filePath ./Dockerfile".execute().waitFor();
-    // execute("cat ./Dockerfile");
-
 
     execute("git add .")
     execute("git commit -m '${version}'")
     execute("git tag -f ${version}");
-    // execute("git push origin");
-
-
-    // execute("git push origin -f ${version}");
+    execute("git push origin -f ${version}");
 }
 
 def execute(String cmd) {

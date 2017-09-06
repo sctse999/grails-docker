@@ -1,10 +1,10 @@
 # Credits:
 # https://github.com/mozart-analytics/grails-docker
-FROM openjdk:8
+FROM openjdk:7
 
 # Set customizable env vars defaults.
 # Set Grails version
-ENV GRAILS_VERSION 3.3.0
+ENV GRAILS_VERSION 2.0.0
 
 # Install Grails
 WORKDIR /opt
